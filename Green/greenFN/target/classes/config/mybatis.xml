@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC 
+	"-//mybatis.org//DTD Config 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+	
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="false"/>
+		<setting name="useGeneratedKeys" value="false"/>
+		<setting name="mapUnderscoreToCamelCase" value="false"/>
+		<setting name="jdbcTypeForNull" value="NULL"/>
+	</settings>
+	
+	<typeAliases>
+		<typeAlias type="com.avengors.model.OneWordDTO" alias="oneWord" />
+		<typeAlias type="com.avengors.model.MemberDTO" alias="member"/>
+		<typeAlias type="com.avengors.model.BoardDTO" alias="board"/>
+	</typeAliases>
+	
+	<typeHandlers>
+        <typeHandler handler="com.avengors.utils.BooleanTypeHandler"/>
+    </typeHandlers>
+	
+</configuration>

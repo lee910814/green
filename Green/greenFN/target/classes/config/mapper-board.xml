@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+		"-//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.avengors.model.BoardDAO">
+
+	<!-- 게시글 작성 -->
+	<insert id="boardWrite" parameterType="board">
+		INSERT INTO BOARD
+		    (MIDX, TITLE, CONTENT, CATEGORY, uploadfile)
+		VALUES
+		    (#{midx}, #{title}, #{content}, #{category}, #{uploadfile})
+	</insert>
+
+	<!-- 총 게시글 갯수 -->
+	<select id="countBoard" resultType="int">
+		select count(*) from board where deleted = 'n'
+	</select>
+	<select id="countCategoryBoard" resultType="int">
+		select count(*) from board where deleted = 'n' and category = #{category}
+	</select>
+
+	<!-- 목록 -->
+	<select id="selectListBoard" resultType="board">
+		SELECT * 
+		FROM (
+			SELECT ROWNUM RN, B.* 
+				FROM (
+					SELECT B.idx, B.midx, B.title, B.content , B.category, B.uploadfile, B.viewcount, B.wdate, M.name 
+						FROM board B join member M on M.idx = B.midx
+                        where B.deleted = 'n'
+						ORDER BY B.idx desc
+						) B
+				)
+		WHERE RN BETWEEN #{start} AND #{last}
+	</select>
+	
+	<select id="boardCategoryList" resultType="board">
+		SELECT * 
+		FROM (
+			SELECT ROWNUM RN, B.* 
+				FROM (
+					SELECT B.idx, B.midx, B.title, B.content , B.category, B.uploadfile, B.viewcount, B.wdate, M.name 
+						FROM board B join member M on M.idx = B.midx
+                        where B.deleted = 'n' and category = #{category}
+						ORDER BY B.idx desc
+						) B
+				)
+		WHERE RN BETWEEN #{start} AND #{last}
+	</select>
+	
+	<!-- 조회수-->
+	<update id="CountUp" parameterType="board">
+		UPDATE BOARD SET
+		viewCount = viewCount +1
+		WHERE IDX = #{idx}
+	</update>
+	
+	<!-- 삭제 -->
+	<update id="deleteBoard" parameterType="board">
+		UPDATE BOARD SET
+		deleted = 'y'
+		WHERE IDX = #{idx}
+	</update>
+	
+	<!-- 상세보기 -->
+	<select id="selectOne" resultType="board">
+		SELECT * FROM BOARD WHERE IDX = #{idx}
+	</select>
+	
+	<!-- 수정 -->
+	<update id="updateBoard" parameterType="board">
+		UPDATE BOARD SET
+		TITLE = #{title},
+		category = #{category},
+		CONTENT = #{content}
+		WHERE IDX = #{idx}
+	</update>
+
+</mapper>

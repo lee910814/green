@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+		"-//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		
+<mapper namespace="com.avengors.model.MemberDAO">
+
+	<!-- 아이디 중복체크용 -->
+	<select id="checkId" resultType="int">
+		select count(*) from member where email = #{email}
+	</select>
+	
+	<!-- 회원 가입 -->
+	<insert id="join" parameterType="member">
+	
+		insert into member
+		   (email, userpw, name, birth, gender, postcode, address1, address2, salt)
+		values
+		   (#{email}, #{userpw}, #{name}, #{birth}, #{gender}, #{postcode}, #{address1}, #{address2}, #{salt})
+	</insert>
+	
+	<!-- 로그인 -->
+	<select id="selectOne" resultType="member">
+		select * from member where email = #{email}
+	</select>
+	
+	<!-- 회원탈퇴 -->
+	<update id="deleteMember" parameterType="member">
+		update member SET deleted='y'
+	</update>
+	
+	<!-- 수정 -->
+	<update id="updateMember" parameterType="member">
+		update member set 
+			userpw = #{userpw},
+			name = #{name},
+			birth = #{birth},
+			gender = #{gender},
+			postcode = #{postcode},
+			address1 = #{address1},
+			address2 = #{address2},
+			salt = #{salt} 
+				where idx=#{idx}
+	</update>
+	
+	
+</mapper>

@@ -1,0 +1,1638 @@
+/*0730*/
+/* header @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/* html { */
+/* 	height: 100%; */
+/* } */
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+#utilBody{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+#utilHeader{
+    z-index: 5;
+}
+#utilCate {
+    position: fixed;
+    right: 50px;
+    top: 30px;
+    color: white;
+    z-index: 4;
+}
+.onUtil {
+	color: black;
+	top: 30px;
+}
+#utilBody > #utilHeader {
+    text-align: left;
+    width: 100%;    
+    height: 110px;
+    position: fixed;
+    top: -110px;
+    right: 0;
+    transition-duration: 1s;
+    background-color: white;
+}
+#utilBody > #utilHeader > #utilH1{
+	width: 120px;
+    height: 70px;
+    line-height: 70px;
+    padding-left: 30px;
+}
+#headerNav{
+    display: flex;
+    height: 28px;
+    float:right;
+    margin: 0 20px;
+    text-align: center;
+}
+.inUtil{
+	border-bottom: 2px solid transparent;
+}
+.inUtil,
+#closeUtil {
+    width: 80px;
+    margin: 0 30px;
+}
+#closeUtil {
+	font-size: 28px;
+	font-weight: normal;
+	text-align: right;
+}
+
+.homeBody {
+	background-color: rgb(40, 40, 40);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center; 
+	position: relative;
+	user-select: none;
+}
+
+#homeHeader {
+	padding-top: 20px;
+	width: 1180px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	display: flex;
+	justify-content: space-between;
+	color: white;
+}
+.title > a > h1 {
+    font-size: 32pt;
+}
+
+
+.cate, #utilCate {
+	padding-left: 20px;
+	text-align: left;
+	font-size: 28px;
+	font-weight: normal;
+	mix-blend-mode: difference;
+}
+.cate:hover,
+#utilCate:hover,
+#closeUtil:hover{
+    color: rgb(255, 156, 90);
+    transition-duration: 0.8s;
+}
+
+.closeBtn {
+	font-size: 28px;
+	font-weight: normal;
+	margin-top: 30px;
+	margin-right: 40px;
+	color: rgb(40, 40, 40);
+	transition-duration: 0.5s;
+	text-align: right;
+}
+.closeBtn > a:hover {
+	color : rgb(255, 156, 90);
+	transition-duration: 0.5s;
+}
+
+.login, .logout {
+	color: white;
+	padding: 10px;
+	width: 150px;
+	font-size: 1.15rem;
+}
+.login:hover, .logout:hover {
+    color: rgb(255, 156, 90);
+    transition-duration: 0.8s;
+}
+
+.joinBtn, .myPage {
+	color: rgb(40, 40, 40);
+	border: 1px solid white;
+	background-color: white;
+	border-radius: 50px;
+	border-width: thick;
+	padding: 10px;
+	font-size: 1rem;
+	transition-duration: 0.5s;
+}
+
+/* home @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.joinBtn:hover, .myPage:hover {
+	background-color: transparent;
+	border: 1px solid rgb(255, 156, 90);
+	border-width: thick;
+	color: rgb(255, 156, 90);
+	transition-duration: 0.5s;
+}
+
+aside {
+	width: 350px;
+	height: 103%;
+	top: 0;
+	left: -350px;
+	z-index: 5;
+	background-color: white;
+	color: rgb(40, 40, 40);
+	position: absolute;
+	transition-duration: 0.5s;
+}
+
+.mainAside {
+	width: 350px;
+}
+
+.asideList {
+	width: 350px;
+	text-align: center;
+	margin-top: 15%;
+}
+
+.asideList>p {
+	margin: 45px 130px;
+	padding: 2.5px;
+	font-size: 15pt;
+	border-bottom: 2px solid transparent;
+}
+.asideList>p:hover,
+#headerNav > .inUtil:hover {
+	border-bottom: 2px solid rgb(255, 156, 90);
+	transition-duration: 1s;
+	
+}
+
+main {
+	width: 1180px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.part3 {
+	width: 34%;
+	height: 700px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	line-height: 700px;
+	font-size: 20px;
+	background-size: auto 700px;
+	background-position: center;
+	font-weight: bold;
+	color: transparent;
+	cursor: pointer;
+	display: inline-block;
+	transition-duration: 0.5s;
+}
+
+.sea {
+   background-image:
+      url('http://221.164.9.200:9876/태풍.jpg');
+}
+
+.air {
+   background-image:
+      url('http://221.164.9.200:9876/미세먼지.jpg');
+}
+
+.land {
+   background-image:
+      url('http://221.164.9.200:9876/코로나.jpg');
+}
+
+.part3:hover {
+	width: 50%;
+	background-size: auto 800px; 
+	transition-duration: 1s;
+    font-size: 50px;
+	color: white;
+	text-shadow: 4px 4px 6px rgb(50, 50, 50);
+}
+
+/* loginForm @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.loginForm {
+	padding: 50px;
+	width: 300px;
+	height: 410px;
+	margin: auto;
+	margin-bottom: 100px;
+	align-items: center;
+	position: fixed;
+	text-align: center;
+	background-color: white;
+	z-index: 5;
+	color: rgb(40, 40, 40);
+}
+.login_id input {
+	width: 238px;
+	height: 50px;
+	padding: 0 30px;
+	border: 3px solid rgb(40, 40, 40);
+	outline: none;
+	margin-bottom: 20px;
+	transition-duration: 0.5s;
+	border-radius: 7px;
+}
+.login_id input:hover, .login_id input:focus {
+	border: 3px solid rgb(255, 156, 90);
+}
+.submitBtn {
+	margin-top: 20px;
+}
+.submitBtn input {
+	background-color: rgb(40, 40, 40);
+	transition-duration: 0.4s;
+	border: 3px solid rgb(40, 40, 40);
+}
+.submitBtn input:hover {
+	border: 3px solid rgb(40, 40, 40);
+	background-color: transparent;
+	color: rgb(40, 40, 40);
+	cursor: pointer;
+}
+
+.submitBtn input, .anotherLogin>div {
+	width: 100%;
+	height: 50px;
+	border: 0;
+	outline: none;
+	border-radius: 7px;
+	color: white;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+}
+
+.anotherLogin {
+	margin-top: 40px;
+	border-top: 1px solid rgb(40, 40, 40);
+	padding-top: 20px;
+}
+
+
+
+/* join @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.joinBody {
+	background-color: rgb(40, 40, 40);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.joinForm {
+	width: 1024px;
+	background-color: white;
+	color: rgb(40, 40, 40);
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	padding-top: 40px;
+	padding-bottom: 80px;
+	margin-top: 50px;
+}
+
+.join {
+	width: 420px;
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+}
+.checkId, .checkPw, .addressWarp {
+	width: inherit;
+}
+
+#idMsg, #pwMsg {
+	height: 40px;
+	font-size: 9pt;
+	text-align: right;
+}
+
+.checkId > div > input,
+.postCodeDiv > input {
+	width: 278px;
+}
+.checkId > div > input,
+.checkPw > input,
+.NameBir > input,
+.postCodeDiv > input,
+#address1, #address2{
+	height: 16px;
+	padding: 10px;
+	border: 3px solid rgb(40, 40, 40);
+	margin: 2px;
+	transition-duration: 0.3s;
+	margin: 5px 0;
+}
+.checkPw > input,
+.NameBir > input,
+#address1, #address2 {
+	width: 394px;
+}
+.checkId > div > input:hover,
+.checkPw > input:hover,
+.NameBir > input:hover,
+.postCodeDiv > input:hover,
+#address1:hover, #address2:hover{
+	border: 3px solid rgb(255, 156, 90);
+}
+.checkId > div > input:focus,
+.checkPw > input:focus,
+.NameBir > input:focus,
+.postCodeDiv > input:focus,
+#address1:focus, #address2:focus{
+	outline: none;
+	border: 3px solid rgb(255, 156, 90);
+}
+#checkEmail,
+#addressBtn,
+#joinSubmit > input[type="submit"] {
+	border: 3px solid rgb(40, 40, 40);
+	background-color: rgb(40, 40, 40);
+	color: white;
+	width: 110px;
+	height: 42px;
+	padding-bottom: 3.4px;
+	padding-top: 1px;
+	transition-duration: 0.3s;
+}
+#joinSubmit > input[type="submit"] {
+	width: 420px;
+}
+#checkEmail:hover,
+#addressBtn:hover,
+#joinSubmit > input[type="submit"]:hover {
+	background-color: transparent;
+	color: rgb(40, 40, 40);
+} 
+/*radio 버튼 색상변경 */
+input[type='radio'] {
+    -webkit-appearance:none;
+    width:16px;
+    height:16px;
+    border:1px solid darkgray;
+    border-radius:50%;
+    outline:none;
+    background:white;
+}
+input[type='radio']:before {
+    content:' ';
+    display:block;
+	border-radius: 50%;
+    width:10px;
+    height:10px;
+	margin: 2px;
+}
+input[type='radio']:checked:before {
+  	background:rgb(255, 156, 90);
+}
+.addressWarp, .gender,
+.NameBir > input,
+#joinSubmit > input[type="submit"] {
+	margin-top: 18px;
+}
+.authForm {
+	background-color: white;
+	width: 300px;
+	height: 200px;
+	position: fixed;
+	top: 150px;
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	align-items: center;
+	
+}
+.authForm > input {
+	width: 174px;
+	height: 16px;
+	padding: 10px;
+	border: 3px solid rgb(40, 40, 40);
+	margin: 2px;
+	transition-duration: 0.3s;
+	margin: 5px 0;
+}
+.authForm > input:hover {
+	border: 3px solid rgb(255, 156, 90);
+}
+.authForm > button {
+	width: 200px;
+	height: 42px;
+	color: white;
+	border: 3px solid rgb(40, 40, 40);
+	background-color: rgb(40, 40, 40);
+}
+.authForm > button:hover,
+.authForm > button:focus {
+	border: 3px solid rgb(40, 40, 40);
+} 
+
+/*oneword @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.oneWordBody {
+	background-color: rgb(40, 40, 40);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	flex-flow: column;
+}
+
+.oneWordWrap {
+	width: 768px;
+    color: white;
+}
+
+.oneWordTitleWarp {
+	display: flex;
+	padding-top: 20px;
+}
+.earthImg {
+	width: 160px;
+	height: 160px;
+	overflow: hidden;
+	border-radius: 50%;
+	background-position: center;
+	background-size: 200px;
+}
+
+.oneWordTitleWarp>.oneWordTitle {
+	font-size: 25pt;
+	line-height: 160px;
+	padding-left: 10px;
+	color: white;
+}
+
+#loginName {
+	padding-left: 10px;
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+#oneWordForm {
+	position: relative;
+	border: 1px solid lightgray;
+	width: 768px;
+	height: 160px;
+}
+
+.oneWordContent {
+	width: 738px;
+	height: 90px;
+	resize: none;
+	border: none;
+	border-bottom: 1px solid lightgray;
+	padding: 13px;
+	font-size: 12pt;
+	background-color: rgb(40, 40, 40);
+}
+
+.oneWordContent::placeholder {
+	color: #dadada;
+}
+
+.oneWordContent::-webkit-input-placeholder {
+	color: #dadada
+}
+
+.oneWordContent:-ms-input-placeholder {
+	color: #dadada
+}
+
+#oneWordForm>p>input {
+	position: absolute;
+	right: 0;
+	bottom: -1px;
+	width: 110px;
+	height: 43px;
+	background-color: white;
+	color: rgb(40, 40, 40);
+	font-size: 11pt;
+    border: 3px solid transparent;
+    transition-duration: 0.5s;
+}
+
+#oneWordForm>p>input:hover {
+    background-color: transparent;
+    cursor: pointer;
+    color:rgb(255, 156, 90);
+    border: 3px solid rgb(255, 156, 90);
+    transition-duration: 0.5s;
+}
+#oneWordForm > textarea {
+	border: 2px solid white;
+	color: white;
+}
+#oneWordForm > textarea:focus{
+	outline: none;
+	border: 2px solid rgb(255, 156, 90);
+	transition-duration: 0.5s;
+}
+
+sup {
+	padding: 10px;
+	line-height: 31px;
+	font-size: 13pt;
+}
+
+#oneWordList {
+	padding-top: 20px;
+}
+
+#oneWordList>ul {
+	display: flex;
+	padding-left: 5px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid lightgray;
+}
+
+#oneWordList>ul>li:nth-child(1) {
+	width: 80px;
+	font-size: 10pt;
+	font-weight: bold;
+	padding-right: 13px;
+}
+
+#oneWordList>ul>li:nth-child(2) {
+	width: 530px;
+	font-size: 9pt;
+	padding-right: 10px;
+}
+
+#oneWordList>ul>li:nth-child(3) {
+	width: 80px;
+	font-size: 7pt;
+	color: lightgray;
+	padding-right: 12px;
+}
+
+.onewordDeleteBtn {
+	all: unset;
+	font-size: 9pt;
+	font-weight: bold;
+	border-bottom: 1px solid red;
+}
+li {
+	list-style: none;
+	color: inherit;
+}
+
+.paging-number {
+	text-align: center;
+	font-size: 11pt;
+}
+
+.paging-number>a {
+	padding-left: 10px;
+}
+.paging-number > a:hover {
+	color: rgb(255, 156, 90);
+}
+/* myPage@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.mypageBody{
+	background-color: rgb(40, 40, 40);
+}
+.mypageRoot {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.myPageForm {
+	margin-top: 10%;
+	margin-bottom:10%;
+	width: 768px;
+	background-color: white;
+	color: rgb(40, 40, 40);
+	display: block;
+	padding-top: 30px;
+	padding-bottom: 40px;
+}
+
+.mypageTitle {
+	padding-bottom: 20px;
+	font-size: 25pt;
+	text-align: center;
+}
+
+.idDiv, .myPageNameDiv, .myPageDate, .genderDiv, .addressDIv {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-left: 50px;
+	padding-bottom: 10px;
+	font-size: 13pt;
+	font-weight: bold;
+	border-bottom: 1px solid #dadada;
+}
+
+.idDiv>p {
+	padding: 0;
+	margin: 0;
+}
+
+.mypageInfo input {
+	border: 2px solid rgb(40, 40, 40);
+	outline: none;
+	margin: 5px 0;
+	padding: 10px;
+}
+
+.mypageInfo input:hover, .mypageInfo input:focus {
+	border: 2px solid rgb(255, 156, 90);
+}
+
+.passwordDiv {
+	padding-left: 50px;
+}
+
+.pwMsg {
+	height: 20px;
+	line-height: 20px;
+	font-size: 9pt;
+}
+
+.radioBtn {
+	padding-right: 30px;
+}
+.mypageBtns{
+	display: flex;
+	justify-content: space-between;	
+}
+.mypageBtns > div{
+	margin: 0 50px;
+}
+
+.modifyBtn, .cancelBtn, .deleteBtn {
+	width: 100px;
+	height: 40px;
+	background-color: rgb(40, 40, 40);
+	border: 3px solid rgb(40, 40, 40);
+	transition-duration: 0.3s;
+	color: white;
+	margin-top: 5px;
+}
+
+.mofsubmitBtn {
+	width: 100px;
+	height: 42px;
+	background-color: rgb(40, 40, 40);
+	border: 3px solid rgb(40, 40, 40);
+	transition-duration: 0.3s;
+	color: rgb(247, 238, 223);
+	margin-top: 5px;
+}
+
+.modifyBtn:hover, .mofsubmitBtn:hover, .cancelBtn:hover, .deleteBtn:hover {
+	border: 3px solid rgb(40, 40, 40);
+	background-color: white;
+	color: rgb(40, 40, 40);
+	transition-duration: 0.3s;
+	cursor: pointer;
+}
+.modifyInputDiv > div {
+	height: 20px;
+}
+#FindPostBtn {
+	background-color: rgb(40, 40, 40); !important;
+	color: white;
+	margin: 0;
+	padding-top: 9px;
+    padding-bottom: 11px;
+}
+#FindPostBtn:hover{
+	color: rgb(40, 40, 40);
+	background-color: transparent;
+	border: 2px solid rgb(40, 40, 40);
+	
+}
+
+.genderLabel > input{
+	padding: 8px;
+	margin: 0px;
+	margin-right: 3px;
+}
+.genderLabel > input[type="radio"]:before {
+	content: '';
+	width: 10px;
+	height: 10px;
+	margin: -5px;
+}
+/* footer */
+footer {
+	width: 1180px;
+	text-align: center;
+	color: rgb(0, 0, 0, 0.5);
+}
+
+.footerMenu {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+}
+.footerMenu > div > p{
+	margin: 10px;
+}
+
+
+
+.web {
+	text-align: center;
+	width: 100%;
+	color: #858585;
+	font-size: 1rem;
+}
+
+
+.sns {
+	width: 50%;
+	height: 90px;
+	display: flex;
+	justify-content: center;
+}
+
+.sns>div {
+	margin-right: 10px;
+	margin-left: 20px;
+}
+
+.sns>div:hover {
+	cursor: pointer;
+}
+
+.fabAll {
+	color: lightgrey;
+	transition-duration: 0.5s;
+}
+.fabAll:hover {
+	color: rgb(255, 156, 90);
+}
+
+.youtube {
+	font-size: 3rem;
+	margin-left: 20px;
+}
+
+.fas {
+	font-size: 0.8rem;
+	color: lightgrey;
+	display: inline-block;
+}
+
+.fab {
+	margin-top: 30px;
+}
+#foot{
+	margin-top: 20px;
+}
+
+/* List @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+#ListH1 {
+	height: 125px;
+}
+#ListH1 > h1 {
+	font-size: 35pt;
+	line-height: 125px;
+	color: white;
+}
+.ListBody{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    backGround-color: rgb(40, 40, 40);
+}
+.ListWrap{
+    background-color: white;
+    width: 1600px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 40px 25px rgba(0,0,0,0.15), -5px -5px 40px 25px rgba(0,0,0,0.15);
+    margin-bottom: 100px;
+}
+#ListChart{
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+#airChart{
+	width: 50%;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+#ListChart > h1 {
+	margin: 30px 0 15px 0;
+}
+
+#ListList{
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    align-items: center; 
+    overflow: auto;
+}
+
+#ListChart,
+#ListList,
+#airChart {
+	height: 800px;	
+}
+#chart_div,
+#covidGraph {
+	width: 100%;
+	height: 550px;
+}
+
+#airImg{
+	height: 430px;
+	margin-bottom: 15px;
+}
+#airBtns {
+	margin: 5px;
+}
+#airBtns > button {
+	width: 155px;
+	height: 30px;
+	border: 2px solid rgb(40, 40, 40);
+	background-color: rgb(40, 40, 40);
+	color: white;
+	transition-duration: 0.4s;
+	
+}
+#airBtns > button:hover {
+	background-color: transparent;
+	color: rgb(40, 40, 40);
+}
+#airTable {
+	font-size: 10pt;
+	border-collapse: collapse;
+}
+#airTable td,
+#airTable th {
+	border: 1px solid darkgray;
+	padding: 2px 3px;
+}
+#airTable th{
+	background-color: rgb(185, 230, 255);
+}
+/*news.jsp @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.newsBody {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	flex-flow: column;
+	background-color: rgb(40, 40, 40);
+}
+
+.newsRoot {
+	width: 1180px;
+	margin: 100px 0 50px 0;
+	background-color: white;
+	box-shadow: 5px 5px 40px 25px rgba(0,0,0,0.15), -5px -5px 40px 25px rgba(0,0,0,0.15);
+}
+
+.newsTopTitle {
+	height: 40px;
+	font-size: 20pt;
+	padding: 20px;
+	margin: auto;
+	border: 1px solid #dadada;
+	line-height: 40px;
+	display: flex;
+	justify-content: space-between;
+}
+.newsWrap {
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	align-items: center;
+}
+.newsRightInfo {
+/* 	width: 100%; */
+}
+.news {
+	padding: 18px;
+	width: 894px;
+	margin: 2.5px;
+	height: 214px;
+	border-bottom: 3px solid lightGrey;
+}
+.news:hover {
+	border-bottom: 3px solid rgb(255, 156, 90);
+	transition-duration: 1s;
+}
+.newsBoxHeader{
+	margin: 50px 0 0 0;
+	width: 600px;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: column;
+}
+.newsBoxHeader > div {
+	margin-top: 4px;
+}
+.newsFlex {
+	display: flex;
+}
+
+.newsImage {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 200px;
+	width: 350px;
+	height: 200px;
+	margin: 10px;
+}
+
+.newsTit {
+	font-size: 12pt;
+	color: black;
+}
+
+.newsDateAndViewCount {
+	font-size: 10pt;
+	color: gray;
+}
+
+.newsDate {
+	padding-right: 12px;
+}
+
+.goodImg {
+	width: 20px;
+	height: 20px;
+}
+
+.newsContent > p {
+	width: 600px;
+	margin-top:20px;
+	display: -webkit-box;
+    word-wrap: break-word;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 10pt;
+}
+.newsPaging{
+	width: 100%;
+	font-size: 14pt;
+	height: 50px;
+	line-height: 35px;
+	
+}
+.newsWriteBtn{
+	display: inline;
+	float: right;
+	margin: 20px 30px 0 0;
+	font-size: 11pt;	
+	color: darkgray;
+	transition-duration: 0.5s;
+}
+.newsWriteBtn:hover {
+	color: rgb(255, 156, 90);
+}
+/*ListList*/
+.Lists {
+	padding: 18px 0;
+	width: 799px;
+	margin: 2.5px 0;
+	
+}
+.ListImage {
+	width: 200px;
+	height: 200px;
+	background-size: auto 210px;
+	overflow: hidden;
+	margin-left: 0;
+	margin-right: 50px;
+}
+.ListTit,
+.ListContent > p,
+.ListRightInfo {
+	width: 544px;
+	margin-right: 0;
+}
+#ListList{
+	overflow-x: hidden;
+}
+.ListBoxHeader{
+	width: inherit;
+}
+.ListPaging{
+	height: 50px;
+	line-height: 50px;
+	transition-duration: 0.5s;
+}
+/*view @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.viewBody{
+	background-color: rgb(40, 40, 40);
+	
+}
+#viewHeader {
+	width: 1180px;
+	height: 150px;
+	margin: 100px 0 50px 0;
+	background-color: white;
+	user-select: none;
+}
+#viewH1 {
+	display: inline;
+	text-align: left;
+}
+#viewH1 > h1 {
+	margin: 20px;
+	line-height: 70px;
+}
+#viewHeader2 {
+	padding: 8px;
+	border-top: 1px solid lightgray;
+	display: flex;
+	justify-content: space-between;
+}
+#viewWdateCount{
+	display: flex;
+	margin-left: 20px;
+}
+#viewViewCount{
+	margin: 0 15px;
+}
+#viewMain {
+	width: 1100px;
+	background-color: white;
+	margin: 30px 0 100px 0;
+	padding: 40px;
+}
+#viewImage {
+	width: 400px;
+	height: 300px;
+	background-size: 400px auto;
+	margin: 30px 340px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#viewContent{
+	margin: 50px;
+}
+#Btns{
+	margin: 0px 15px;
+	font-size: 11pt;
+	font-weight: normal;
+}
+#Btns > button {
+	border: none;
+	background-color: transparent;
+	font-size: inherit;
+	cursor: pointer;
+	transition-duration: 0.5s;
+}
+#Btns > button:hover,
+#Btns > a:hover {
+	color: rgb(255, 156, 90);
+}
+#viewContent{
+	line-height: 30px;
+}
+
+
+/*write @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.writeBody {
+	background-color: rgb(40, 40, 40);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.writeTopTitle {
+	color: silver;
+	padding-top: 30px;
+}
+
+.writeTopUnderLine {
+	width: 807px;
+	border-bottom: 1px solid silver;
+}
+
+.writeMain {
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.writeTitle {
+	padding-top: 20px;
+}
+
+.writeTitle>input {
+	width: 800px;
+	height: 35px;
+	margin: auto;
+	font-size: 13pt;
+	padding-left: 8px;
+}
+
+.writeTitle>input::placeholder {
+	color: #dadada;
+}
+
+.writeTitle>input::-webkit-input-placeholder {
+	color: #dadada
+}
+
+.writeTitle>input:-ms-input-placeholder {
+	color: #dadada
+}
+
+.writeRadioDiv {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.writeRadioDiv>label>input[type="radio"] {
+	display: none;
+}
+
+.writeRadioDiv>label>input[type="radio"]+span {
+	display: inline-block;
+	background: none;
+	border: 1px solid #dfdfdf;
+	padding: 0px 10px;
+	text-align: center;
+	height: 35px;
+	line-height: 33px;
+	font-weight: 500;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.writeRadioDiv>label>input[type="radio"]:checked+span {
+	border: 1px solid #4b8dc4;
+	background: #4b8dc4;
+	color: #fff;
+	transition-duration: 0.5s;
+}
+
+.writeRadioDiv>label>span {
+	width: 150px;
+	color: white;
+	font-weight: bold;
+}
+
+.writeTextArea>textarea {
+	width: 798px;
+	height: 350px;
+	margin: auto;
+	font-size: 10pt;
+	padding: 8px;
+}
+
+.writeTextArea>textarea::placeholder {
+	color: #dadada;
+}
+
+.writeTextArea>textarea::-webkit-input-placeholder {
+	color: #dadada
+}
+
+.writeTextArea>textarea:-ms-input-placeholder {
+	color: #dadada
+}
+
+.writeSup {
+	padding: 10px;
+	line-height: 31px;
+	font-size: 11pt;
+	color: white;
+	background-color: rgb(40, 40, 40);
+}
+
+#fileInput {
+	display: none;
+}
+
+.wrtieFile>.fileLabel {
+	padding: 6px 25px;
+	background-color: #4b8dc4;
+	border-radius: 4px;
+	color: white;
+	cursor: pointer;
+	font-size: 12pt;
+	font-weight: bold;
+	float: right;
+}
+
+.wrtieFile>.fileLabel:hover {
+	background-color: #98b0c4;
+	color: black;
+	transition-duration: 0.5s;
+}
+
+.writeCansle {
+	width: 300px;
+	padding-top: 10px;
+}
+
+.writeCansle>input,.writeCansle> button {
+	width: 100px;
+	height: 40px;
+	background-color: #4b8dc4;
+	color: white;
+	font-size: 12pt;
+	font-weight: bold;
+	border-radius: 4px;
+}
+
+.writeCansle>input:hover, button:hover {
+	background-color: #98b0c4;
+	color: black;
+	transition-duration: 0.5s;
+}
+/*introduce.jsp 소개글 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.introduceBody {
+	background-color: rgb(40, 40, 40);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	user-select: none;
+}
+
+.intdwrapper {
+	width: 900px;
+}
+
+.intdH1 {
+	text-align: center;
+	color: silver;
+	margin-top: 50px;
+	font-size: 20pt;
+}
+
+.introUl {
+	display: flex;
+	border-bottom: 1px solid silver;
+}
+
+.introUl>li {
+	padding: 20px;
+	font-size: 14pt;
+	font-weight: bold;
+	color: silver;
+	margin-top: 30px;
+}
+
+.introUl>li:hover {
+	color: rgb(255, 156, 90);
+	transition-duration: 0.8s;
+}
+
+.introUl>li:nth-child(1), .introUl>li:nth-child(2), .introUl>li:nth-child(3)
+	{
+	padding-right: 80px;
+}
+
+.intdTitle {
+	color: white;
+	font-size: 17pt;
+	font-weight: bold;
+	line-height: 60px;
+}
+
+.introduceNav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.pUp {
+	padding-left: 40px;
+	color: white;
+	font-size: 11pt;
+}
+
+.pDown {
+	padding-left: 40px;
+	color: white;
+	font-weight: bold;
+	font-size: 14pt;
+}
+
+.introImg>img {
+	width: 400px;
+}
+
+.endIntro {
+	background-color: gray;
+	height: 130px;
+	border-radius: 5px;
+}
+
+.PEnd {
+	padding-left: 10px;
+	padding-top: 10px;
+	font-family: cursive;
+}
+
+
+
+
+/* overlay @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.aisdeOverlay, .overlay, .HNavOverlay {
+	width: 100%;
+	height: 300%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgb(0, 0, 0, 0.5);
+	z-index: 4;
+}
+
+.hidden {
+	display: none;
+}
+
+.overFlow {
+	overflow: hidden;
+}
+/*scrollbar @@@@@@@@@@@@@@@@*/
+#ListList::-webkit-scrollbar{
+	width: 7px;
+}
+#ListList::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+#ListList::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: rgb(255, 156, 90);
+}
+#ListList::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+#utilBody::-webkit-scrollbar{
+	width: 8px;
+}
+#utilBody::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+#utilBody::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: lightGrey;
+  transition-duration: 1s;
+}
+#utilBody::-webkit-scrollbar-thumb:hover {
+  border-radius: 3px;
+  background-color: rgb(255, 156, 90);
+}
+#utilBody::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+/* 반응형  !!!! 맨아래 필수 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+@media (max-width : 1600px) {
+    .ListWrap {
+        width: 1180px;
+    }
+    .Lists{
+    	width: 582px;
+    }
+	.ListTit,
+	.ListContent > p,
+	.ListRightInfo {
+		width: 332px;
+	}
+}
+@media ( max-width : 1180px) {
+	#homeHeader, main, footer {
+		width: 768px;
+	}
+	main {
+		flex-flow: column;
+		margin-top: 5px;
+	}
+	.part3 {
+		width: 100%;
+		height: 231px;
+		line-height: 231px;
+	}
+	.part3:hover {
+		width: 100%;
+		font-size: 45px;
+		transition-duration: 1s;
+	}
+	.joinForm {
+		width: 768px;
+	}
+	.ListWrap{
+	    width: 768px;
+	    flex-flow: column;
+	}
+	#ListChart{
+		height: 450px;
+	    width: 100%;
+	}
+	#ListList{
+		width: 100%;
+		height: auto;
+		overflow: unset;
+	}
+	#airChart {
+	    width: 100%;
+	    height: 500px;
+	}
+	#chart_div,
+	#covidGraph {
+		height: 400px; 
+	}
+	.newsRoot{
+		width: 768px;
+	}
+	.news {
+		width: 700px;
+	}
+	.newsContent>p,
+	.newsBoxHeader {
+		width: 400px;
+	}
+	.Lists{
+    	width: 730px;
+    	background-color: white;
+    }
+    .ListTit,
+	.ListContent > p,
+	.ListRightInfo {
+		width: 490px;
+	}
+	#viewHeader{
+		width: 768px;
+	}
+	#viewMain{
+		width: 688px;
+	}
+	#viewImage{
+		margin: 30px 147;
+	}
+}
+@media ( max-width : 768px) {
+	#homeHeader, main, footer {
+		width: 480px;
+	}
+	.part3 {
+		height: 205px;
+		line-height: 205px;
+	}
+	footer {
+		height: 180px;
+	}
+	.address, .sns {
+		width: 100%;
+	}
+	.footerMenu {
+		flex-flow: column;
+	}
+	.joinForm {
+		width: 480px;
+	}
+	/* 원워드      --------------------------*/
+	.oneWordWrap {
+        width: 480px;
+    }
+    #oneWordForm {
+		width: 480px;
+	}
+	.oneWordContent {
+		width: 450px;
+	}
+	#headerNav{
+		margin:0;
+	}
+	#headerNav > .inUtil,
+	#closeUtil {
+		width: 74px;
+		margin: 0;
+	}
+	#closeUtil {
+		text-align: center;
+	}
+	.ListWrap{
+	    width: 480px;
+	}
+	#airImg {
+		height: 370px;
+		margin-right: 10px;
+	}
+	#airBtns > button{
+		width: 133px;
+	}
+	#footerWeb {
+		margin-top: 30px;
+	}
+	.newsRoot{
+		width: 480px;
+	}
+	.news {
+		width: 400px;
+		height: 180px;
+	}
+	.newsContent>p,
+	.newsBoxHeader {
+		width: 200px;
+	}
+	.newsImage {
+		background-size: auto 160px;
+		width: 250px;
+		height: 160px;
+		margin: 10px;
+	}
+	.ListImage {
+		width: 180px;
+		height: 180px;
+		margin: 0;
+		margin-right: 20px;
+	}
+	.newsBoxHeader{
+		margin-top: 20px;	
+	}
+	.Lists{
+    	width: 460px;
+    }
+    .ListTit,
+	.ListContent > p,
+	.ListRightInfo {
+		width: 280px;
+	}
+	#viewHeader{
+		width: 480px;
+	}
+	#viewMain{
+		width: 401px;
+	}
+	#viewImage{
+		margin: 30px 0;
+	}
+	#viewContent{
+		margin: 50px 0;
+		line-height: 25px;
+	}
+}
+@media ( max-width : 484px) {
+	#utilHeader {
+		width: 480px;
+	}
+	#headerNav > .inUtil {
+		margin: 0;
+	}
+}
