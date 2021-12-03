@@ -6,10 +6,10 @@
 ---
 💻 소개<br><br>
 
-*front-end
+*front-end <br><br>
 <img width="231" alt="image" src="https://user-images.githubusercontent.com/62333447/144560310-2ac3bf11-14e6-4649-ac59-024d449c7b0f.png">
 
-*back-end
+*back-end<br><br>
 
 
 
